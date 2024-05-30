@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import React from 'react';
 import PageContainer from '@/app/components/container/PageContainer';
@@ -19,14 +19,13 @@ export default function Landingpage() {
     <PageContainer title="Landingpage" description="this is Landingpage">
       <LpHeader />
       <Banner />
-      <DemoSlider />
-      <Frameworks />
+      {/* <DemoSlider /> */}
+      {/* <Frameworks /> */}
       <Testimonial />
-      <Features />
+      {/* <Features /> */}
       <C2a />
       <C2a2 />
       <Footer />
     </PageContainer>
   );
-};
-
+}

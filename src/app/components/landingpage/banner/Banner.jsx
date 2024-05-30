@@ -8,8 +8,8 @@ import { styled } from '@mui/material/styles';
 import BannerContent from './BannerContent';
 import Image from 'next/image';
 
-import bannerImg1 from "/public/images/landingpage/bannerimg1.svg";
-import bannerImg2 from "/public/images/landingpage/bannerimg2.svg";
+import bannerImg1 from '../../../../../public/images/landingpage/bannerimg1.svg';
+import bannerImg2 from '../../../../../public/images/landingpage/bannerimg2.svg';
 
 const Banner = () => {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));

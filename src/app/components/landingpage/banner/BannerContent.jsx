@@ -29,12 +29,12 @@ const BannerContent = () => {
           damping: 30,
         }}
       >
-        <Typography variant="h6" display={'flex'} gap={1} mb={2}>
+        {/* <Typography variant="h6" display={'flex'} gap={1} mb={2}>
           <Typography color={'secondary'}>
             <IconRocket size={'21'} />
           </Typography>{' '}
           Kick start your project with
-        </Typography>
+        </Typography> */}
 
         <Typography
           variant="h1"
@@ -48,11 +48,9 @@ const BannerContent = () => {
             },
           }}
         >
-          Most powerful &{' '}
           <Typography component={'span'} variant="inherit" color={'primary'}>
-            Developer friendly
+            HRMS24
           </Typography>{' '}
-          NextJs dashboard
         </Typography>
       </motion.div>
       <Box pt={4} pb={3}>
@@ -67,8 +65,9 @@ const BannerContent = () => {
           }}
         >
           <Typography variant="h5" fontWeight={300}>
-            Modernize comes with light & dark color skins, well designed dashboards, applications
-            and pages.
+            HRMS24 is your trusted and versatile partner in human resource management solutions. At
+            HRMS24, we specialise in providing comprehensive HRMS services tailored to meet the
+            unique needs of businesses of all sizes around the globe.
           </Typography>
         </motion.div>
       </Box>
@@ -87,9 +86,9 @@ const BannerContent = () => {
             Login
           </StyledButton>
 
-          <StyledButton variant="outlined" href="#demos">
+          {/* <StyledButton variant="outlined" href="#demos">
             Live Preview
-          </StyledButton>
+          </StyledButton> */}
         </Stack>
       </motion.div>
     </Box>

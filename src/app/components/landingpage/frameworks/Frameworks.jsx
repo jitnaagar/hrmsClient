@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 import FrameworksTitle from './FrameworksTitle';
 import Image from 'next/image';
 
-import SliderImg from "/public/images/landingpage/background/slider-group.png";
+import SliderImg from '../../../../../public/images/landingpage/background/slider-group.png';
 
 const SliderBox = styled(Box)(() => ({
   '@keyframes slide': {
@@ -38,20 +38,12 @@ const Frameworks = () => {
       <Stack overflow="hidden" mt={6} direction={'row'}>
         <Box>
           <SliderBox>
-            <Image
-              src={SliderImg}
-              alt="slide"
-              style={{ height: '100%' }}
-            />
+            <Image src={SliderImg} alt="slide" style={{ height: '100%' }} />
           </SliderBox>
         </Box>
         <Box>
           <SliderBox>
-            <Image
-              src={SliderImg}
-              alt="slide"
-              style={{ height: '100%' }}
-            />
+            <Image src={SliderImg} alt="slide" style={{ height: '100%' }} />
           </SliderBox>
         </Box>
       </Stack>

@@ -9,23 +9,23 @@ import { styled } from '@mui/material/styles';
 import DemoTitle from './DemoTitle';
 import Image from 'next/image';
 
-import Demo1 from '/public/images/landingpage/demos/demo-main.jpg';
-import Demo2 from '/public/images/landingpage/demos/demo-dark.jpg';
-import Demo3 from '/public/images/landingpage/demos/demo-horizontal.jpg';
-import Demo4 from '/public/images/landingpage/demos/demo-rtl.jpg';
+import Demo1 from '../../../../../public/images/landingpage/demos/demo-main.jpg';
+import Demo2 from '../../../../../public/images/landingpage/demos/demo-dark.jpg';
+import Demo3 from '../../../../../public/images/landingpage/demos/demo-horizontal.jpg';
+// import Demo4 from '/public/images/landingpage/demos/demo-rtl.jpg';
+import Demo4 from '../../../../../public/images/landingpage/demos/demo-rtl.jpg';
 
-import App1 from '/public/images/landingpage/apps/app-calendar.jpg';
-import App2 from '/public/images/landingpage/apps/app-chat.jpg';
-import App3 from '/public/images/landingpage/apps/app-contact.jpg';
-import App4 from '/public/images/landingpage/apps/app-email.jpg';
-import App5 from '/public/images/landingpage/apps/app-note.jpg';
-import App6 from '/public/images/landingpage/apps/app-user-profile.jpg';
-import App7 from '/public/images/landingpage/apps/app-blog.jpg';
-import App8 from '/public/images/landingpage/apps/app-ticket.jpg';
-import App9 from '/public/images/landingpage/apps/app-ecommerce-shop.jpg';
-import App10 from '/public/images/landingpage/apps/app-ecommerce-checkout.jpg';
-import App11 from '/public/images/landingpage/apps/app-ecommerce-list.jpg';
-
+import App1 from '../../../../../public/images/landingpage/apps/app-calendar.jpg';
+import App2 from '../../../../../public/images/landingpage/apps/app-chat.jpg';
+import App3 from '../../../../../public/images/landingpage/apps/app-contact.jpg';
+import App4 from '../../../../../public/images/landingpage/apps/app-email.jpg';
+import App5 from '../../../../../public/images/landingpage/apps/app-note.jpg';
+import App6 from '../../../../../public/images/landingpage/apps/app-user-profile.jpg';
+import App7 from '../../../../../public/images/landingpage/apps/app-blog.jpg';
+import App8 from '../../../../../public/images/landingpage/apps/app-ticket.jpg';
+import App9 from '../../../../../public/images/landingpage/apps/app-ecommerce-shop.jpg';
+import App10 from '../../../../../public/images/landingpage/apps/app-ecommerce-checkout.jpg';
+import App11 from '../../../../../public/images/landingpage/apps/app-ecommerce-list.jpg';
 
 const demos = [
   {
@@ -83,7 +83,7 @@ const apps = [
   },
   {
     link: 'https://modernize-nextjs.adminmart.com/apps/blog/post',
-    img: App7,
+    img: App8,
     title: 'Blog App',
   },
   {

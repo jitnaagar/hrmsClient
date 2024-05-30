@@ -12,6 +12,7 @@ import Logo from '@/app/(DashboardLayout)/layout/shared/logo/Logo';
 import Navigations from './Navigations';
 import MobileSidebar from './MobileSidebar';
 import { IconMenu2 } from '@tabler/icons-react';
+import CompanyLogo from '../../../../../public/images/landingpage/logo2.png';
 
 const LpHeader = () => {
   const AppBarStyled = styled(AppBar)(({ theme }) => ({
