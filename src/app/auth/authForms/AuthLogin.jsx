@@ -28,6 +28,24 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
     password
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('test')
+    const requestOptions = {
+      method : 'POST',
+      headers: {'Content-Type': 'application/json'},
+      url : `${API_URL}/auth/login`,
+      data: JSON.stringify({
+        email : userName,
+        password : password
+      })
+    }
+    console.log('re', requestOptions)
+    axios(requestOptions)
+    .then(data => console.log('data', data))
+    .catch(error => console.log('error', error))
+  }
+
   return (
     <>
       {title ? (
@@ -60,30 +78,10 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
           password : Yup.string().required('Required'),
         })}
         initialValues={initialValues}
-        onSubmit={()=> {
-          const requestOptions = {
-            method : 'POST',
-            headers : {
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin' : '*'
-            },
-            url : `${API_URL}/auth/login`,
-            data : {
-              email : userName,
-              password : password
-            }
-          }
-          axios(requestOptions)
-          .then(data => {
-            console.log('data', data)
-          })
-          .catch(error => {
-            console.log('error', error)
-          })
-        }}
+        onSubmit={handleSubmit}
         
       >
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Stack>
             <Box>
               <CustomFormLabel htmlFor="username">Username</CustomFormLabel>
