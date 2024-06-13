@@ -5,7 +5,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-import { setVisibilityFilter } from '@/store/apps/contacts/ContactSlice';
+import { setVisibilityFilter } from '../../../../store/apps/contacts/ContactSlice';
 import Scrollbar from '../../../components/custom-scroll/Scrollbar';
 import { IconMail, IconSend, IconBucket, IconFolder } from '@tabler/icons-react';
 import ContactAdd from './ContactAdd';

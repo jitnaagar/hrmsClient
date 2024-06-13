@@ -8,7 +8,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { styled } from '@mui/material/styles';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleMobileSidebar } from '@/store/customizer/CustomizerSlice';
+import { toggleMobileSidebar } from '../../../../../store/customizer/CustomizerSlice';
 import { IconMenu2 } from '@tabler/icons-react';
 import Notifications from '../../vertical/header/Notification';
 

@@ -5,7 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import NavListing from "./NavListing/NavListing";
 import Logo from "../../shared/logo/Logo";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleMobileSidebar } from "@/store/customizer/CustomizerSlice";
+import { toggleMobileSidebar } from "../../../../../store/customizer/CustomizerSlice";
 import SidebarItems from "../../vertical/sidebar/SidebarItems";
 
 const Navigation = () => {

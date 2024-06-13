@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   toggleSidebar,
   toggleMobileSidebar,
-} from "@/store/customizer/CustomizerSlice";
+} from "../../../../../store/customizer/CustomizerSlice";
 import { IconMenu2 } from "@tabler/icons-react";
 import Notifications from "./Notification";
 import Profile from "./Profile";

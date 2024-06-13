@@ -6,7 +6,7 @@ import {
   fetchContacts,
   DeleteContact,
   toggleStarredContact,
-} from '@/store/apps/contacts/ContactSlice';
+} from '../../../../store/apps/contacts/ContactSlice';
 
 import Scrollbar from '../../../components/custom-scroll/Scrollbar';
 import ContactListItem from './ContactListItem';

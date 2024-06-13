@@ -21,8 +21,8 @@ import {
   toggleHorizontal,
   setBorderRadius,
   setCardShadow, 
-} from '@/store/customizer/CustomizerSlice';
-import Scrollbar from "@/app/components/custom-scroll/Scrollbar";
+} from '../../../../../store/customizer/CustomizerSlice';
+import Scrollbar from "../../../../components/custom-scroll/Scrollbar";
 import WbSunnyTwoToneIcon from '@mui/icons-material/WbSunnyTwoTone';
 import DarkModeTwoToneIcon from '@mui/icons-material/DarkModeTwoTone';
 import SwipeLeftAltTwoToneIcon from '@mui/icons-material/SwipeLeftAltTwoTone';

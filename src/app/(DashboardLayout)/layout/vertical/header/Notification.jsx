@@ -9,7 +9,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import * as dropdownData from './data';
-import Scrollbar from '@/app/components/custom-scroll/Scrollbar';
+import Scrollbar from '../../../../components/custom-scroll/Scrollbar';
 
 import { IconBellRinging } from '@tabler/icons-react';
 import { Stack } from '@mui/system';

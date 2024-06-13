@@ -5,8 +5,8 @@ import { useTheme } from '@mui/material/styles';
 import SidebarItems from './SidebarItems';
 import Logo from '../../shared/logo/Logo';
 import { useSelector, useDispatch } from 'react-redux';
-import { hoverSidebar, toggleMobileSidebar } from '@/store/customizer/CustomizerSlice';
-import Scrollbar from '@/app/components/custom-scroll/Scrollbar';
+import { hoverSidebar, toggleMobileSidebar } from '../../../../../store/customizer/CustomizerSlice';
+import Scrollbar from '../../../../components/custom-scroll/Scrollbar';
 import { Profile } from './SidebarProfile/Profile';
 
 const Sidebar = () => {

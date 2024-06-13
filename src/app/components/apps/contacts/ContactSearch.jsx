@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
-import { SearchContact } from '@/store/apps/contacts/ContactSlice';
+import { SearchContact } from '../../../../store/apps/contacts/ContactSlice';
 import { IconMenu2, IconSearch } from '@tabler/icons-react';
 
 const ContactSearch = ({ onClick }) => {

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import NavItem from './NavItem';
 import NavCollapse from './NavCollapse';
 import NavGroup from './NavGroup/NavGroup';
-import { toggleMobileSidebar } from '@/store/customizer/CustomizerSlice';
+import { toggleMobileSidebar } from '../../../../../store/customizer/CustomizerSlice';
 
 
 const SidebarItems = () => {

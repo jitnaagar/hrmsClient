@@ -1,4 +1,4 @@
-import CustomSocialButton from "@/app/components/forms/theme-elements/CustomSocialButton";
+import CustomSocialButton from "../../components/forms/theme-elements/CustomSocialButton";
 import { Stack } from "@mui/system";
 import Avatar from '@mui/material/Avatar';
 import Box from '@mui/material/Box';

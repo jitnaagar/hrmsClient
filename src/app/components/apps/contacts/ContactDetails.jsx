@@ -15,7 +15,7 @@ import {
   UpdateContact,
   DeleteContact,
   toggleStarredContact,
-} from '@/store/apps/contacts/ContactSlice';
+} from '../../../../store/apps/contacts/ContactSlice';
 import BlankCard from '../../shared/BlankCard';
 import { IconPencil, IconStar, IconTrash, IconDeviceFloppy } from '@tabler/icons-react';
 import Scrollbar from '../../../components/custom-scroll/Scrollbar';

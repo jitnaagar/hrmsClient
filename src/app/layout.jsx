@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Providers } from "@/store/providers";
+import { Providers } from "../store/providers";
 import MyApp from './app';
 import "./global.css";
 

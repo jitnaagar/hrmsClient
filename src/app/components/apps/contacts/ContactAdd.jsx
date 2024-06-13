@@ -9,7 +9,7 @@ import FormLabel from '@mui/material/FormLabel';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from '@/store/apps/contacts/ContactSlice';
+import { addContact } from '../../../../store/apps/contacts/ContactSlice';
 
 const ContactAdd = () => {
   const dispatch = useDispatch();
