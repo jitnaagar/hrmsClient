@@ -9,6 +9,7 @@ import Customizer from "./layout/shared/customizer/Customizer";
 import Navigation from "./layout/horizontal/navbar/Navigation";
 import HorizontalHeader from "./layout/horizontal/header/Header";
 import { useSelector } from 'react-redux';
+import { useSession } from "next-auth/react";
 
 const MainWrapper = styled("div")(() => ({
   display: "flex",
@@ -27,8 +28,13 @@ const PageWrapper = styled("div")(() => ({
 }));
 
 export default function RootLayout({ children }) {
+  const { status } = useSession()
   const customizer = useSelector((state) => state.customizer);
   const theme = useTheme();
+
+  if(status === 'unauthenticated'){
+    return window.location.replace('/auth/auth1/login')
+  }
 
   return (
     <MainWrapper>
