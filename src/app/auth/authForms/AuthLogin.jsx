@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import * as Yup from 'yup';
-import { signIn, useSession } from "next-auth/react";
+import { signIn, useSession } from 'next-auth/react';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -16,51 +16,51 @@ import { Formik, Form, Field } from 'formik';
 import { useEffect, useState } from 'react';
 import { TextField } from 'formik-mui';
 import axios from 'axios';
-import Config from '../../../config/Config'
+import Config from '../../../config/Config';
 
-const { API_URL } = Config
+const { API_URL } = Config;
 
 const AuthLogin = ({ title, subtitle, subtext }) => {
-  const {session, status} = useSession()
-  const [userName, setUserName] = useState('')
-  const [password, setPassword] = useState('')
+  const { session, status } = useSession();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
 
   const initialValues = {
-    userName, 
-    password
-  }
+    userName,
+    password,
+  };
 
-  // const signInWithToken = async (token) => {
-  //   await signIn("credentials", {
-  //     token: token,
-  //   });
-  // };
+  const signInWithToken = async (token) => {
+    await signIn('credentials', {
+      token: token,
+    });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const requestOptions = {
-      method : 'POST',
-      headers: {'Content-Type': 'application/json'},
-      url : `${API_URL}/auth/login`,
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      url: `${API_URL}/auth/login`,
       data: {
-        email : userName,
-        password : password
-      }
-    }
+        email: userName,
+        password: password,
+      },
+    };
     axios(requestOptions)
-    .then(async (data) => {
-      console.log(data)
-      await signIn(data.data.token)
-      window.location.replace('/')
-    })
-    .catch(error => console.log('error', error))
-  }
+      .then(async (data) => {
+        console.log(data);
+        await signInWithToken(data.data.token);
+        // window.location.replace('/')
+      })
+      .catch((error) => console.log('error', error));
+  };
 
-  useEffect(()=> {
-    if(status === 'authenticated'){
-      window.location.replace('/')
+  useEffect(() => {
+    if (status === 'authenticated') {
+      window.location.replace('/');
     }
-  },[session, status])
+  }, [session, status]);
 
   return (
     <>
@@ -90,12 +90,11 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
       <Formik
         enableReinitialize
         validationSchema={Yup.object({
-          userName : Yup.string().required('Required'),
-          password : Yup.string().required('Required'),
+          userName: Yup.string().required('Required'),
+          password: Yup.string().required('Required'),
         })}
         initialValues={initialValues}
         onSubmit={handleSubmit}
-        
       >
         <Form onSubmit={handleSubmit}>
           <Stack>
@@ -109,9 +108,9 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
                 fullWidth
                 value={userName}
                 autoComplete="off"
-                onChange={(e)=> setUserName(e.target.value)}
-                />
-               {/* <CustomTextField id="username" variant="outlined" fullWidth /> */}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+              {/* <CustomTextField id="username" variant="outlined" fullWidth /> */}
             </Box>
             <Box>
               <CustomFormLabel htmlFor="password">Password</CustomFormLabel>
@@ -123,8 +122,8 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
                 variant="outlined"
                 fullWidth
                 value={password}
-                onChange={(e)=> setPassword(e.target.value)}
-                />
+                onChange={(e) => setPassword(e.target.value)}
+              />
               {/* <CustomTextField id="password" type="password" variant="outlined" fullWidth /> */}
             </Box>
             <Stack justifyContent="space-between" direction="row" alignItems="center" my={2}>
@@ -148,13 +147,7 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
             </Stack>
           </Stack>
           <Box>
-            <Button
-              color="primary"
-              variant="contained"
-              size="large"
-              fullWidth
-              type="submit"
-            >
+            <Button color="primary" variant="contained" size="large" fullWidth type="submit">
               Sign In
             </Button>
           </Box>
@@ -162,7 +155,7 @@ const AuthLogin = ({ title, subtitle, subtext }) => {
       </Formik>
       {subtitle}
     </>
-  )
+  );
 };
 
 export default AuthLogin;

@@ -1,39 +1,38 @@
-"use client";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import { styled, useTheme } from "@mui/material/styles";
-import React, { useState } from "react";
-import Header from "./layout/vertical/header/Header";
-import Sidebar from "./layout/vertical/sidebar/Sidebar";
-import Customizer from "./layout/shared/customizer/Customizer";
-import Navigation from "./layout/horizontal/navbar/Navigation";
-import HorizontalHeader from "./layout/horizontal/header/Header";
+'use client';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import { styled, useTheme } from '@mui/material/styles';
+import React, { useState } from 'react';
+import Header from './layout/vertical/header/Header';
+import Sidebar from './layout/vertical/sidebar/Sidebar';
+import Customizer from './layout/shared/customizer/Customizer';
+import Navigation from './layout/horizontal/navbar/Navigation';
+import HorizontalHeader from './layout/horizontal/header/Header';
 import { useSelector } from 'react-redux';
-import { useSession } from "next-auth/react";
+import { useSession } from 'next-auth/react';
 
-const MainWrapper = styled("div")(() => ({
-  display: "flex",
-  minHeight: "100vh",
-  width: "100%",
+const MainWrapper = styled('div')(() => ({
+  display: 'flex',
+  minHeight: '100vh',
+  width: '100%',
 }));
 
-const PageWrapper = styled("div")(() => ({
-  display: "flex",
+const PageWrapper = styled('div')(() => ({
+  display: 'flex',
   flexGrow: 1,
-  paddingBottom: "60px",
-  flexDirection: "column",
+  paddingBottom: '60px',
+  flexDirection: 'column',
   zIndex: 1,
-  width: "100%",
-  backgroundColor: "transparent",
+  width: '100%',
+  backgroundColor: 'transparent',
 }));
 
 export default function RootLayout({ children }) {
-  const { status } = useSession()
+  const { data, status } = useSession();
   const customizer = useSelector((state) => state.customizer);
   const theme = useTheme();
-
-  if(status === 'unauthenticated'){
-    return window.location.replace('/auth/auth1/login')
+  if (status === 'unauthenticated') {
+    return window.location.replace('/auth/auth1/login');
   }
 
   return (
@@ -42,7 +41,7 @@ export default function RootLayout({ children }) {
       {/* Sidebar */}
       {/* ------------------------------------------- */}
 
-      {customizer.isHorizontal ? "" : <Sidebar />}
+      {customizer.isHorizontal ? '' : <Sidebar />}
 
       {/* ------------------------------------------- */}
       {/* Main Wrapper */}
@@ -51,7 +50,7 @@ export default function RootLayout({ children }) {
         className="page-wrapper"
         sx={{
           ...(customizer.isCollapse && {
-            [theme.breakpoints.up("lg")]: {
+            [theme.breakpoints.up('lg')]: {
               ml: `${customizer.MiniSidebarWidth}px`,
             },
           }),
@@ -62,19 +61,17 @@ export default function RootLayout({ children }) {
         {/* ------------------------------------------- */}
         {customizer.isHorizontal ? <HorizontalHeader /> : <Header />}
         {/* PageContent */}
-        {customizer.isHorizontal ? <Navigation /> : ""}
+        {customizer.isHorizontal ? <Navigation /> : ''}
         <Container
           sx={{
-            maxWidth: customizer.isLayout === "boxed" ? "lg" : "100%!important",
+            maxWidth: customizer.isLayout === 'boxed' ? 'lg' : '100%!important',
           }}
         >
           {/* ------------------------------------------- */}
           {/* PageContent */}
           {/* ------------------------------------------- */}
 
-          <Box sx={{ minHeight: "calc(100vh - 170px)" }}>
-            {children}
-          </Box>
+          <Box sx={{ minHeight: 'calc(100vh - 170px)' }}>{children}</Box>
 
           {/* ------------------------------------------- */}
           {/* End Page */}
